@@ -1,59 +1,164 @@
 *{
-    margin: 0px;
+    margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 .container-imagen {
     width: 100%;
     height: 170px;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
+
 .container-imagen img {
-    position: relative;
     width: 160px;
     height: 160px;
     object-fit: cover; 
-    transform: translate(370%, 5%);
     border-radius: 50%;
 }
 
+        
+        @media (max-width: 767px) {
+            .container-imagen {
+                height: 150px;
+            }
+
+            .container-imagen img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .container-imagen {
+                height: 160px;
+            }
+
+            .container-imagen img {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
 .container_caption{
-    position: relative;
-    display: grid;
-    margin-top: 0px;
-    text-align: center;
     width: 100%;
-    height: 80px;
-    color: white;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
     background-color: black;
+}
+
+.container_typing{
+    animation: animacion 3.5s steps(25, end), transparent .5s step-end infinite alternate;
+    width: 12.1en;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 25px;
+    color: white;
+    border-right: 3px solid;
+}
+
+@keyframes animacion{
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Ajusta esto al tamaño de tu texto */
+    }
+}
+
+@keyframes transparent{
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
+.border{
+    border: solid;
 }
 
 .container_menu{
     display: grid;
-    background-color: brown;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(237, 154, 237, 0.71);
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-    "inicio biografia estudios hobbies";
+    "inicio biografia mascotas hobbies";
+
 }
 
 #button_inicio{
     grid-area: inicio;
-    background-color: blue;
+    border-radius: 40px;
+    font-size: 30px;
+    color: white;
+    background-color:  black;
+    margin-left: 100px;
+    margin-top: 30px;
 }
 
 #button_biografia{
     grid-area: biografia;
-    background-color: brown;
+    border-radius: 40px;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    margin-left: 100px;
+    margin-top: 30px;
 }
 
-#button_estudios{
+#button_mascotas{
     grid-area: estudios;
-    background-color: blueviolet;
+    border-radius: 40px;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    margin-left: 100px;
+    margin-top: 30px;
 }
 
 #button_hobbies{
     grid-area: hobbies;
-    background-color: cadetblue;
+    border-radius: 40px;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.container_img{
+    display: grid;
+    width: 100%;
+    height: 300px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "img1 img2";
+    background-color: aquamarine;
+}
+
+#container_img1{
+    width: 100%;
+    height: 400px;
+    grid-area: img1;
+    background-color: chocolate;
+}
+
+#container_img2{
+    width: 100%;
+    height: 400px;
+    grid-area: img2;
+    background-color: rgb(30, 66, 210);
 }
