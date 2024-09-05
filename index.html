@@ -8,20 +8,24 @@
 </head>
 <body>
     <header>
-        <div class="container-imagen">
-            <img src="/IMG/foto_perfil.jpg" alt="img_perfil">
-        </div>
-        <div class="container_caption">
-            <h1 class="container_typing">
-                Hola, mi nombre es Mercy!</h1>
+        <div class="container">
+            <div class="container-imagen">
+                <img src="IMG/foto_perfil.jpg" alt="img_perfil">
+            </div>
+    
+            <div class="container_caption">
+                <h1 class="container_typing">
+                    Hola, mi nombre es Mercy!</h1>
+            </div>
         </div>
     </header>
-    <div  class="container_menu">
+
+    <nav class="container_menu">
         <section>
             <button id="button_inicio">Inicio</button>
         </section>
         <section>
-            <button id="button_biografia">Biografia</button>
+            <button id="button_biografia">Biografía</button>
         </section>
         <section>
             <button id="button_mascotas">Mascotas</button>
@@ -29,10 +33,59 @@
         <section>
             <button id="button_hobbies">Hobbies</button>
         </section>
-    </div>
+    </nav>  
+
     <div class="container_img">
-        <section id="container_img1">imagen1</section>
-        <section id="container_img2">imagen2</section>
+        <section id="container_img1">
+            <img src="IMG/img1_belen.jpeg" alt="img_1">
+        </section>
+        <section id="container_img2">
+            <img src="IMG/waffles.jpeg" alt="waffles">
+        </section>
     </div>
+
+    <div class="container_biografia">
+        <section id="container_contenido">
+            <p>
+                Mercy Dayanna Florez Parra nació el 13 de mayo del 2003 en la ciudad de Florencia, Caquetá. Es hija de William Yovanny Florez García y Lucelia Parra Bermúdez. Desde muy pequeña, su padre decidió no acompañarla en su infancia y adolescencia. Sin embargo, gracias a su mamá y abuelita, quienes con gran esfuerzo la sacaron adelante, hoy en día es una hermosa mujer que está desarrollando un pregrado en la Universidad de la Amazonia, cursando la carrera de Ingeniería de Sistemas. Actualmente, se encuentra acompañada de su mamá, su abuelita y seis mascotas, y es muy amorosa con los animales.
+            </p>
+        </section>
+        
+        <section id="container_foto1">
+            <img src="IMG/mami.jpeg" alt="mamita">
+        </section>
+        
+        <section id="container_foto2">
+            <img src="IMG/abuelita.jpeg" alt="abuelita">
+    </div>
+    <main class="container_mascotas">
+            <div class="carrusel">
+                <div class="btn-left">&lt;</div>
+
+                <section id="container_carrucel_img">
+                <img src="IMG/cristal.jpeg" alt="cristal">
+                </section>
+        
+                <section id="container_carrucel_img">
+                <img src="IMG/canelo.jpeg" alt="canelo">
+                </section>
+        
+                <section id="container_carrucel_img">
+                <img src="IMG/olguita.jpeg" alt="olga">
+                </section>
+        
+                <section id="container_carrucel_img">
+                <img src="IMG/millytacha.jpeg" alt="millytacha">
+                </section>
+                
+                <div class="btn-right">&gt;</div>
+            </div>
+
+    </main>
+
+    <div class="container_hobbies">
+        hobbiessss
+    </div>
+    <script src="JS/evento.js"></script>
 </body>
 </html>
